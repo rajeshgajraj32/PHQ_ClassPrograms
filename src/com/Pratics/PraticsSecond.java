@@ -1,5 +1,7 @@
 package com.Pratics;
 
+import java.util.Scanner;
+
 public class PraticsSecond {
 	static String print() {
 		try {
@@ -42,8 +44,14 @@ public class PraticsSecond {
 	        for (int j = 0; j < i + 1; ++j)
                  arr[i][j] = j + 1;
                  */
-		
-		System.out.println(print());
+		Scanner sc=new Scanner(System.in);
+        System.out.println("================================");
+        for(int i=0;i<3;i++){
+            String s1=sc.next();
+            int x=sc.nextInt();
+            System.out.printf("%-15s%03d\n",s1,x);
+        }
+        System.out.println("================================");
 	    
 	}
 

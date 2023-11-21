@@ -28,6 +28,9 @@ public class Pratics extends FreePratics {
 		
 		//Pratics p=new Pratics(20);
 		//System.out.println(a);
+		int a=64;
+		a=(a<<2);
+		System.out.println(a);
 		
 		try {
 			System.out.println(args[2]);

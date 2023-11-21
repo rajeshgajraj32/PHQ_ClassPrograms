@@ -34,7 +34,7 @@ public class Downcasting extends A{
 		dow1.showx();
 		System.out.println("-------------------------");
 		
-		//Downcasting dow2=new A(10,20);  //showing cannot convert 
+		//Downcasting dow2=new A(10,20);  //showing cannot convert --class cast exception
 		//dow.showx();
 		//dow.showy();
 		System.out.println("-------------------------");
