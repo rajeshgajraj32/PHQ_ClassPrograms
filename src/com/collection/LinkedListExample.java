@@ -69,8 +69,10 @@ public class LinkedListExample {
     	System.out.println(list1.offerFirst(540));
     	// offerLast method Inserts the specified element at the end of this list.
     	System.out.println(list1.offerLast(242));
-    	
-    	System.out.println(list1.remove(1100));
+    	//Replaces the element at the specified position in this list with the specified element
+    	System.out.println("set method"+list1.set(1,999));
+    	// remove method use for remove the element of specific index
+    	System.out.println(list1.remove(1));
     	System.out.println(list2.toArray());
     	System.out.println(list1);
     }

@@ -1,26 +1,44 @@
 package com.question;
+
 import java.util.ArrayList;
-class EmployeeExampleMain {
+import java.util.Iterator;
+
+class Employee {
 	private int empId;
 	private String empName;
-	
-	public EmployeeExampleMain(int empId,String empName) {
-		this.empId=empId;
-		this.empName=empName;
-	}
-	
-	void get(EmployeeExampleMain emp) {
-		System.out.println("ID: "+emp.empId);
-		System.out.println("Name: "+emp.empName);
-	}
-}
-class EmployeeExample{
-	public static void main(String[] args) {
-		ArrayList<EmployeeExampleMain> emplist= new ArrayList<EmployeeExampleMain>();
-		EmployeeExampleMain emp1=new EmployeeExampleMain(12,"rajesh");
-		EmployeeExampleMain emp2=new EmployeeExampleMain(12,"rajesh");
-		EmployeeExampleMain emp3=new EmployeeExampleMain(12,"rajesh");
-		
+
+	Employee(int empId, String empName) {
+		this.empId = empId;
+		this.empName = empName;
 	}
 
+	int getId() {
+		return empId;
+	}
+
+	String getName() {
+		return empName;
+	}
+}
+
+class ArrayListPrivate {
+	private ArrayList<Employee> list = new ArrayList<Employee>();
+
+	ArrayList<Employee> get() {
+		return list;
+	}
+}
+
+class EmployeeExampleMain {
+	public static void main(String[] args) {
+		ArrayListPrivate alp = new ArrayListPrivate();
+		alp.get().add(new Employee(12, "rajesh"));
+		alp.get().add(new Employee(15, "dheeraj"));
+		alp.get().add(new Employee(20, "choudhary"));
+		Iterator itr = alp.get().iterator();
+		while (itr.hasNext()) {
+			Employee e = (Employee) itr.next();
+			System.out.println("Employee id is: " + e.getId() + " Name: " + e.getName());
+		}
+	}
 }

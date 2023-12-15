@@ -7,7 +7,7 @@ import java.util.Iterator;
 public class ArrayListExample {
 	static void ArrayListAllMethodsPratics() {
 		// without Generic
-				List list = new ArrayList();
+				ArrayList list = new ArrayList();
 				list.add(10);
 				list.add("rajesh");
 				list.add('A');
@@ -22,6 +22,7 @@ public class ArrayListExample {
 				list1.add("rajesh gajraj");
 				list1.add("sanjay samota");
 				list1.add("dheeraj choudhary");
+
 				list1.stream().forEach(System.out::print);
 				System.out.println();
 				// sort the Arraylist this way
@@ -104,6 +105,38 @@ public class ArrayListExample {
         System.out.println("-----------6---------");
         list2.stream().forEach(System.out::println);
     }
+   static void arrayListImport() {
+	   
+	   //1. compile time error because ArrayList is a specifice type 
+	  /* ArrayList<Integer> list1=new ArrayList<Integer>();
+	   list1.add(10);
+	   
+	   ArrayList<String> list2=new ArrayList<String>();
+	   list2.add("rajesh");
+	   list2.add(list1);
+	   */
+	   
+	   //2. compile time error because ArrayList is a specifice type 
+	   /*
+	   ArrayList<Integer> list3=new ArrayList<>();
+	   list3.add(10);
+	   
+	   ArrayList<String> list4=new ArrayList();
+	   list4.add("rajesh");
+	   list4.add(list3);
+	   list3.add(list4);
+	   */
+	   
+	   //3. No compile time error because ArrayList is not a specifice type 
+	   
+	   ArrayList list5=new ArrayList<>();
+	   list5.add(10);
+	   
+	   ArrayList<String> list6=new ArrayList();
+	   list6.add("rajesh");
+	   list5.add(list6);
+	   
+   }
 	public static void main(String[] args) {
 		ArrayListAllMethodsPratics();
 		listIteratorMethods();
